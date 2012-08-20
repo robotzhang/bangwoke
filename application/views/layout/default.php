@@ -10,6 +10,7 @@ $action_next = $this->uri->segment(2);
   <meta name="keywords" content="<?php echo $layout['keywords']; ?>" />
   <title><?php echo $layout['title']; ?></title>
   <link rel="stylesheet" href="<?php echo base_url(); ?>/static/stylesheets/application.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/static/stylesheets/global.css" />
   <script src="<?php echo base_url(); ?>/static/javascripts/jquery.js"></script>
 </head>
 
