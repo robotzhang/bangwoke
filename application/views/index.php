@@ -31,23 +31,3 @@
         </ol>
     </div>
 </div>
-
-<div>
-    <?php echo $json->title->{'$t'} ?>
-</div>
-
-<div>
-    <img src="<?php echo $json->link[2]->{'@href'} ?>" />
-</div>
-
-<div>
-    <?php foreach($json->title as $k => $v): ?>
-    <?php echo $k ?> -- <?php echo $v ?>
-    <?php endforeach ?>
-</div>
-
-<div>
-    <?php foreach($json as $key => $value): ?>
-    <div><?php echo $key ?> -- <?php var_dump($value) ?></div>
-    <?php endforeach ?>
-</div>
