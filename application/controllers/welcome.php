@@ -2,8 +2,9 @@
 
 class Welcome extends CI_Controller {
 	public function index() {
-        $data = array('json' => json_decode(file_get_contents('http://api.douban.com/book/subject/1220562?alt=json')));
-		$this->layout->view('index', $data);
+        $this->load->model('Topic_model', 'topic');
+        $topics = $this->topic->for_homepage();
+		$this->layout->view('index', array('topics' => $topics));
 	}
 }
 
