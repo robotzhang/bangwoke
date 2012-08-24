@@ -29,6 +29,21 @@ class Admin extends CI_Controller {
         $this->movie->create($movie);
         redirect(site_url().'/admin');
     }
+
+    public function topic() {
+        $this->layout->view('admin/topic');
+    }
+
+    public function create_topic() {
+        $this->load->model('Topic_model', 'topic');
+        $topic = $this->input->post('topic');
+        if (count($this->topic->find_by('name', $topic['name'])) > 0) {
+            redirect(site_url().'/admin/topic');
+            return;
+        }
+        $this->topic->create($topic);
+        redirect(site_url().'/admin/topic');
+    }
 }
 
 /* End of file admin.php */
