@@ -1,17 +1,16 @@
-<form class="form-horizontal" method="post">
+<form class="form-horizontal" method="post" action="<?php echo site_url() ?>/admin/create_movie">
     <fieldset>
-        <legend>从豆瓣爬取数据</legend>
+        <legend>将从豆瓣爬取的数据入库</legend>
+        <?php foreach ($movie as $k => $v): ?>
         <div class="control-group">
-            <label for="id" class="control-label">电影id</label>
+            <label for="movie[<?php echo $k ?>]" class="control-label"><?php echo $k ?></label>
             <div class="controls">
-                <input type="text" name="id" class="input-xlarge">
-                <p class="help-block">
-                    可以通过豆瓣的<a target="_blank" href="http://movie.douban.com/">电影搜索</a>来确定电影id
-                </p>
+                <input type="text" name="movie[<?php echo $k ?>]" class="input-xxlarge" value="<?php echo is_array($v) ? join(',', $v) : $v ?>">
             </div>
         </div>
+        <?php endforeach ?>
         <div class="form-actions">
-            <button class="btn  btn-success" type="submit">保存更改</button>
+            <button class="btn  btn-success" type="submit">入库</button>
             <button class="btn" type="reset">取消</button>
         </div>
     </fieldset>
