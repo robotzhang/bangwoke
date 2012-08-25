@@ -9,6 +9,7 @@ $action_next = $this->uri->segment(2);
   <meta name="description" content="<?php echo $layout['description']; ?>" />
   <meta name="keywords" content="<?php echo $layout['keywords']; ?>" />
   <title><?php echo $layout['title']; ?></title>
+  <link href="<?php echo base_url(); ?>static/images/favicon.png" type="image/x-icon" rel="icon">
   <link rel="stylesheet" href="<?php echo base_url(); ?>static/stylesheets/application.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>static/stylesheets/global.css" />
   <script src="<?php echo base_url(); ?>static/javascripts/jquery.js"></script>
@@ -17,8 +18,10 @@ $action_next = $this->uri->segment(2);
 <body>
   <?php $this->load->view('common/header.php'); ?>
 
-  <div class="container">
-  	<?php echo $layout['content']; ?>
+  <div class="site">
+      <div class="container">
+        <?php echo $layout['content']; ?>
+      </div>
   </div>
 
   <?php $this->load->view('common/footer.php'); ?>
