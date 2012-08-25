@@ -43,8 +43,9 @@
                 <p>搜索，找片源，然后就是漫长的下载过程...</p>
                 <p>坑爹的是：下载完毕，发现是枪版、是错误版本——正如打了马赛克的《葫芦娃》</p>
                 <p>那么，在<strong> 帮我客 </strong>：</p>
-                <p>只需要选择你想要的电影然后<strong> 货到付款 </strong>就可以了。</p>
+                <p>只需要选择你想要的电影然后<strong> 货到付款 </strong>，然后这些值得珍藏的<strong> 高清电影 </strong>就会刻成碟片到你的手上。</p>
                 <p>多么轻松！</p>
+                <p><a class="btn btn-success" href="<?php echo site_url(); ?>">马上获取</a> </p>
             </div>
         </div>
     </div>
