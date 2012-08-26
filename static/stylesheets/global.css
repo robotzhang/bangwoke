@@ -1,4 +1,5 @@
 body, p{ font-family: "微软雅黑", YaHei, "Helvetica Neue", Helvetica,  Arial, sans-serif; }
+a, a:hover { color: #4183C4; }
 input, textarea, select, .uneditable-input { height: auto; }
 .form-actions { background: none; border-top: none; }
 .header {

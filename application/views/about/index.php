@@ -2,7 +2,7 @@
     .site { padding-top: 0; }
     .about .about_header { position: absolute; left: 0; width: 100%; height: 170px;background: url(https://a248.e.akamai.net/assets.github.com/images/modules/about_page/parallax_bg.jpg?1340935010) 0 0 repeat-x; }
     #about-header { height: 190px; position: relative; color: #fff; }
-    .about .about_menu { background-color: #EFEFEF; padding: 5px; border-radius: 2px; }
+    .about .about_menu { background-color: #EFEFEF; padding: 5px; border-radius: 2px; margin-bottom: 20px; }
     .about .about_menu ul { background-color: #FAFAFB; border: 1px solid #D8D8D8; border-radius: 2px; margin: 0; }
     .about .about_menu ul li { border-bottom: 1px solid #EEEEEE; border-top: 1px solid #FFFFFF; }
     .about .about_menu ul li:first-child { border-top: medium none; }
@@ -17,7 +17,7 @@
     <div class="clearfix" id="about-header">
         <div class="row">
             <div class="span9" style="font-size: 20px; line-height: 170px; text-align: center;">
-                “ 快速获取珍藏的电影 ”
+                “ 快速获取值得珍藏的电影 ”
             </div>
             <div class="span3" style="margin-top: 15px;">
                 <img src="<?php echo base_url() ?>/static/images/about/eve_128_128.png" />
@@ -34,6 +34,14 @@
                     <li><a href="javascript:void(0);">意见反馈</a></li>
                 </ul>
             </div>
+            <!--div style="padding:  0px 10px 5px 10px;">
+                <div></div>
+                <p>告诉我们你想要<a href=""> 珍藏的电影 </a>，我们竭尽所能达成您的要求！</p>
+            </div>
+            <div style="padding: 0px 10px 5px 10px; line-height: 22px;">
+                <div><strong>任何的意见和建议</strong></div>
+                <p>请<a href=""> 反馈 </a>给我们，我们一定尽快解决，另外我们会有一些小的礼物作为答谢。<p>
+            </div-->
         </div>
         <div class="span9">
             <div>
