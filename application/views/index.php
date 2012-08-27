@@ -22,6 +22,7 @@
             generatePagination: false,
             paginationClass: 'slide_nav',
             generateNextPrev: false,
+            hoverPause: true,
             play: 5000, // 自动播放
             animationComplete: function() {
                 var id = $('.slide_nav .current').attr('show');
