@@ -21,13 +21,19 @@
         $(".home_header").slides({
             generatePagination: false,
             paginationClass: 'slide_nav',
-            generateNextPrev: false
+            generateNextPrev: false,
+            play: 5000, // 自动播放
+            animationComplete: function() {
+                var id = $('.slide_nav .current').attr('show');
+                $('.home_header_bg img').hide();
+                $('#'+id).fadeIn();
+            }
         });
 
         $('.slide_nav li a').click(function(){
-            var id = $(this).parents('li').attr('show');
+            /*var id = $(this).parents('li').attr('show');
             $('.home_header_bg img').hide();
-            $('#'+id).fadeIn();
+            $('#'+id).fadeIn();*/
         });
     });
 </script>
@@ -116,7 +122,7 @@
         <div style="padding: 0 10px;">
             <p><strong>可选的、快捷的物流</strong></p>
             <div>发货选择最快、最安全的物流！</div>
-            <div><strong>全场免邮！</strong></div>
+            <div><strong>全场免邮费！</strong></div>
         </div>
     </div>
 </div>
