@@ -28,33 +28,22 @@
         <div class="span3">
             <div class="about_menu">
                 <ul class="unstyled">
-                    <li><a class="selected" href="<?php echo site_url() ?>/about">关于我们</a></li>
-                    <li><a href="<?php echo site_url() ?>/about/team">选片团队</a></li>
+                    <li><a href="<?php echo site_url() ?>/about">关于我们</a></li>
+                    <li><a class="selected" href="<?php echo site_url() ?>/about/team">选片团队</a></li>
                     <li><a href="javascript:void(0);">理念态度</a></li>
                     <li><a href="javascript:void(0);">联系我们</a></li>
                     <li><a href="javascript:void(0);">意见反馈</a></li>
                 </ul>
             </div>
-            <!--div style="padding:  0px 10px 5px 10px;">
-                <div></div>
-                <p>告诉我们你想要<a href=""> 珍藏的电影 </a>，我们竭尽所能达成您的要求！</p>
-            </div>
-            <div style="padding: 0px 10px 5px 10px; line-height: 22px;">
-                <div><strong>任何的意见和建议</strong></div>
-                <p>请<a href=""> 反馈 </a>给我们，我们一定尽快解决，另外我们会有一些小的礼物作为答谢。<p>
-            </div-->
         </div>
         <div class="span9">
             <div>
-                <p>也许你喜欢教父，但是也许你却不知道原来还有枪火...</p>
-                <p>也许你喜欢希德(马达加斯加)的欢乐，但是瓦力(机器人总动员)带给你的除了欢乐还有感动...</p>
-                <p>然后忽然有一天，你想起那些曾经给你感动、带给你哲思、甚至改变了你人生的电影...</p>
-                <p>搜索，找片源，然后就是漫长的下载过程...</p>
-                <p>坑爹的是：下载完毕，发现是枪版、是错误版本——正如打了马赛克的《葫芦娃》</p>
-                <p>那么，在<strong> 帮我客 </strong>：</p>
-                <p>只需要选择你想要的电影然后<strong> 货到付款 </strong>，然后这些值得珍藏的<strong> 高清电影 </strong>就会刻成碟片到你的手上。</p>
-                <p>多么轻松！</p>
-                <p><a class="btn btn-success" href="<?php echo site_url(); ?>">马上获取</a> </p>
+                <p>阅片无数...</p>
+                <p>爱思考，爱讨论，话题从午饭吃什么到宇宙最终的走向...</p>
+                <p>混迹互联网数年的小文艺...</p>
+                <p>最重要的：都是有故事的一群人！</p>
+                <p>当然我们也期待你的帮助...</p>
+                <p><a class="btn btn-success" href="javascript:void(0);">我要选片</a> </p>
             </div>
         </div>
     </div>
