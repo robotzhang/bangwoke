@@ -16,7 +16,7 @@
     .slide_nav li.current a, .slide_nav a:hover { border-color: #fff; }
 </style>
 
-<script src="http://slidesjs.com/examples/product/js/slides.min.jquery.js"></script>
+<script src="<?php echo base_url() ?>/static/javascripts/plugins/slides.min.jquery.js"></script>
 <script>
     $(document).ready(function() {
         $(".home_header").slides({
