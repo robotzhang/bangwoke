@@ -78,7 +78,7 @@
                 </div>
                 <div class="buy_action">
                     女人必看10部电影...
-                    <a class="btn btn-danger" href="<?php echo site_url() ?>/topics/1">即刻拥有 >> </a>
+                    <a target="_blank" class="btn btn-danger" href="<?php echo site_url() ?>/topics/2">即刻拥有 >> </a>
                 </div>
             </blockquote>
             <div class="movie_list">

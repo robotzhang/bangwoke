@@ -1,5 +1,7 @@
 body, p{ font-family: "微软雅黑", YaHei, "Helvetica Neue", Helvetica,  Arial, sans-serif; }
 a, a:hover { color: #4183C4; }
+.btn i { margin-top: 2px; }
+.btn-large [class^="icon-"] {   margin-top: 3px; }
 input, textarea, select, .uneditable-input { height: auto; }
 blockquote { background: url(../images/common/blockquote.png) 0 0 no-repeat; border-left: none; padding: 5px 0 5px 40px; margin-bottom: 10px; }
 blockquote .blockquote_right { background: url(../images/common/blockquote1.png) right bottom no-repeat; padding-bottom: 5px; padding-right: 30px; }
@@ -21,3 +23,12 @@ blockquote .blockquote_right { background: url(../images/common/blockquote1.png)
 .footer a { color: #636363; }
 
 .site { padding: 40px 0; }
+
+.menu { background-color: #EFEFEF; padding: 5px; border-radius: 2px; margin-bottom: 20px; }
+.menu ul { background-color: #FAFAFB; border: 1px solid #D8D8D8; border-radius: 2px; margin: 0; }
+.menu ul li { border-bottom: 1px solid #EEEEEE; border-top: 1px solid #FFFFFF; }
+.menu ul li:first-child { border-top: medium none; }
+.menu ul li:last-child { border-bottom: medium none; }
+.menu a { display: block; padding: 8px 10px; text-shadow: 0 1px 0 #FFFFFF; }
+.menu a:hover { background-color: #FDFDFD; text-decoration: none; color: #08C; }
+.menu a.selected { background: none repeat scroll 0 0 #FFFFFF; border-left: 2px solid #D26911; box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) inset; color: #222222; cursor: default; font-weight: bold; }
