@@ -1,6 +1,7 @@
 <style type="text/css">
     .site { padding-top: 0; }
     .home_header_bg { position: absolute; left: 0; width: 100%; height: 350px;overflow: hidden; }
+    .home_header_bg div { width: 100%; height: 350px; }
     .home_header { height: 390px; position: relative; color: #fff; }
     .topic_info .buy_action { margin-top: 30px; font-size: 16px; text-align: center; }
     .topic_info .buy_action a { font-size: 16px; margin-left: 20px;  }
@@ -26,7 +27,7 @@
             play: 5000, // 自动播放
             animationComplete: function() {
                 var id = $('.slide_nav .current').attr('show');
-                $('.home_header_bg img').hide();
+                $('.home_header_bg div').hide();
                 $('#'+id).fadeIn();
             }
         });
@@ -40,8 +41,8 @@
 </script>
 
 <div class="home_header_bg">
-    <img id="topic_img_1" src="<?php echo base_url() ?>/static/images/home/topic1.jpg"/>
-    <img id="topic_img_2" src="<?php echo base_url() ?>/static/images/home/topic2.jpg"/>
+    <div id="topic_img_1" style="background: url(<?php echo base_url() ?>/static/images/home/topic1.jpg) center center;"></div>
+    <div id="topic_img_2" style="background: url(<?php echo base_url() ?>/static/images/home/topic2.jpg) center center;"></div>
 </div>
 <div class="home_header clearfix">
     <div class="slides_container clearfix pull-left">
