@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-if ( ! function_exists('elements'))
+if ( ! function_exists('parse_douban_movie_to_array'))
 {
     function parse_douban_movie_to_array($data) {
         $movie = array(
