@@ -2,7 +2,7 @@ body, p, table{ font-size: 13px; font-family: "微软雅黑", YaHei, "Helvetica 
 a, a:hover { color: #4183C4; }
 .btn i { margin-top: 2px; }
 .btn-large [class^="icon-"] {   margin-top: 3px; }
-input, textarea, select, .uneditable-input { height: auto; }
+input, textarea, select, .uneditable-input { height: 28px; }
 blockquote { background: url(../images/common/blockquote.png) 0 0 no-repeat; border-left: none; padding: 5px 0 5px 40px; margin-bottom: 10px; }
 blockquote .blockquote_right { background: url(../images/common/blockquote1.png) right bottom no-repeat; padding-bottom: 5px; padding-right: 30px; }
 .form-actions { background: none; border-top: none; }
@@ -12,6 +12,7 @@ blockquote .blockquote_right { background: url(../images/common/blockquote1.png)
 
 .header a { color: #222; }
 
+.header .member ul { margin-bottom: 0; }
 .header .member li {
     float: left; height: 60px; line-height: 60px; padding: 0 5px;
 }
@@ -23,6 +24,7 @@ blockquote .blockquote_right { background: url(../images/common/blockquote1.png)
 .footer a { color: #636363; }
 
 .site { padding: 40px 0; }
+.errors { background-color: #FFEBE8; padding: 10px; border: #DD3C10 1px solid; font-size: 12px; color: #333333; }
 
 .menu { background-color: #EFEFEF; padding: 5px; border-radius: 2px; margin-bottom: 20px; }
 .menu ul { background-color: #FAFAFB; border: 1px solid #D8D8D8; border-radius: 2px; margin: 0; }

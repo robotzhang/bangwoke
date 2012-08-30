@@ -33,6 +33,10 @@ class Cart extends CI_Controller {
     // 到支付宝支付
     public function todo()
     {
+        if (!is_login()) {
+            return redirect(site_url().'/login');
+        }
+        // 添加订单
         $this->load->model('alipay_model', 'alipay');
         header("content-Type: text/html; charset=Utf-8");
         echo $this->alipay->build_form($this->input->post('cart')); // 还应该配置收货地址等，这样用户不用在支付宝去做这个事情了(用户支付宝就用地址？)

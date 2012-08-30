@@ -11,7 +11,7 @@
     .topic_info .movie_list li { float: left; width: 150px; overflow: hidden; text-overflow: ellipsis; line-height: 22px; white-space: nowrap; }
 
     .slides_container { width: 740px; height: 270px; margin: 40px; }
-    .slide_nav { float: right; list-style: none; margin: 30px 0; padding: 3px 8px; border-radius: 3px; background: rgba(0, 0, 0, 0.4); }
+    .slide_nav { float: right; list-style: none; margin: 40px 0; padding: 3px 8px; border-radius: 3px; background: rgba(0, 0, 0, 0.4); }
     .slide_nav a { display: block; border: #000 1px solid; margin: 5px 0; }
     .slide_nav li.current a, .slide_nav a:hover { border-color: #fff; }
 </style>

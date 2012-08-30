@@ -63,6 +63,6 @@
 
     <div class="actions">
         <a class="btn btn-large primary" href="<?php echo site_url() ?>">继续购物</a>
-        <a class="btn btn-large btn-danger pull-right"><b>去结算</b></a>
+        <a class="btn btn-large btn-danger pull-right" href="<?php echo site_url() ?>/cart/todo"><b>去结算</b></a>
     </div>
 </div>
