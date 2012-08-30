@@ -22,14 +22,24 @@ class Users extends CI_Controller {
         }
 	}
 
+    public function logout()
+    {
+        $this->session->unset_userdata('user');
+        redirect(site_url().'/login');
+    }
+
     public function register()
     {
         $user = $this->input->post('user');
         if (empty($user)) {
             return $this->layout->view("users/register");
         }
-        if ($this->user->register($user)) {
-            redirect($this->input->post('url'));
+
+        $user_insert = $this->user->register($user);
+        if ($user_insert !== false) {
+            set_current_user($user_insert);
+            $url = $this->input->post('url');
+            redirect(empty($url) ? site_url() : $url);
         } else {
             $this->layout->view("users/register", array('errors' =>  $this->user->errors));
         }

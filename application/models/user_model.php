@@ -33,7 +33,12 @@ class User_model extends MY_Model
         }
 
         unset($user['repassword']);
-        return $this->create($user);
+        if ($this->create($user)) {
+            $users =  $this->find_by('id', $this->db->insert_id());
+            return $users[0];
+        } else {
+            return false;
+        }
     }
 }
 

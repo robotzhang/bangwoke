@@ -4,6 +4,7 @@
         <div class="member pull-right">
             <?php if (is_login()): ?>
             欢迎：<?php echo substr(current_user()->email, 0, strpos(current_user()->email, '@')); ?>
+            <a href="<?php echo site_url() ?>/logout">退出</a>
             <?php else: ?>
             <ul class="unstyled clearfix">
                 <li class="first"><a href="<?php echo site_url().'/register' ?>">注册</a></li>

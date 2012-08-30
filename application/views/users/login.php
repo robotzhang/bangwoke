@@ -18,7 +18,7 @@
             <div class="control-group">
                 <label for="user[password]" class="control-label">密 码</label>
                 <div class="controls">
-                    <input type="text" name="user[password]" value="">
+                    <input type="password" name="user[password]" value="">
                 </div>
             </div>
             <div class="control-group">
