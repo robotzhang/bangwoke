@@ -1,10 +1,34 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Cart extends CI_Controller {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('cart');
+    }
 	public function index()
 	{
         $this->layout->view("cart/index");
 	}
+
+    // 添加到购物车
+    public function add()
+    {
+        $data = $this->input->post('cart');
+        $this->cart->insert($data);
+        redirect(site_url().'/cart');
+    }
+
+    // 从购物车中移除
+    public function remove()
+    {
+        $data = array(
+            'rowid' => $_GET['rowid'],
+            'qty'   => 0 // 数量设置成0 则会删除
+        );
+        $this->cart->update($data);
+        redirect(site_url().'/cart');
+    }
 
     // 到支付宝支付
     public function todo()

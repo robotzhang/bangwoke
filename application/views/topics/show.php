@@ -43,8 +43,14 @@
             </li>
         </ul>
         <div class="buys">
-            <div class="number">数量<input type="text" value="1" />套 (库存无限)</div>
-            <a class="btn btn-large btn-danger" href="javascript:void(0);"><i class="icon-shopping-cart icon-white"></i> 即刻拥有</a>
+            <form action="<?php echo site_url() ?>/cart/add" method="post">
+                <input type="hidden" name="cart[id]" value="sku_topic_<?php echo $topic->id ?>" />
+                <input type="hidden" name="cart[name]" value="<?php echo '《'.$topic->name.'》高清DVD套装' ?>" />
+                <input type="hidden" name="cart[price]" value="<?php echo $topic->price ?>" />
+                <input type="hidden" name="cart[url]" value="<?php echo current_url() ?>" />
+                <div class="number">数量<input name="cart[qty]" type="text" value="1" />套 (库存无限)</div>
+                <button class="btn btn-large btn-danger" type="submit"><i class="icon-shopping-cart icon-white"></i> 即刻拥有</button>
+            </form>
         </div>
     </div>
 
