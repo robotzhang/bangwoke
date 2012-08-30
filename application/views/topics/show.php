@@ -44,6 +44,8 @@
         </ul>
         <div class="buys">
             <form action="<?php echo site_url() ?>/cart/add" method="post">
+                <input type="hidden" name="cart[goods_type]" value="topic" />
+                <input type="hidden" name="cart[goods_id]" value="<?php echo $topic->id ?>" />
                 <input type="hidden" name="cart[id]" value="sku_topic_<?php echo $topic->id ?>" />
                 <input type="hidden" name="cart[name]" value="<?php echo '《'.$topic->name.'》高清DVD套装' ?>" />
                 <input type="hidden" name="cart[price]" value="<?php echo $topic->price ?>" />
