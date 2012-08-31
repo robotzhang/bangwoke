@@ -34,7 +34,7 @@ class Cart extends CI_Controller {
     public function todo()
     {
         if (!is_login()) {
-            return redirect(site_url().'/login');
+            return redirect(site_url().'/login?url='.site_url().'/cart');
         }
         // 如果购物车为空则返回出错提示
         $cart_items = $this->cart->contents();
