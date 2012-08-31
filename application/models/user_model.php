@@ -7,7 +7,7 @@ class User_model extends MY_Model
 
     public function login($email, $password)
     {
-        $users = $this->db->where(array('email' => $email, 'password' => $password))->get($this->table)->result();
+        $users = $this->db->where(array('email' => $email, 'password' => md5($password)))->get($this->table)->result();
         if (count($users) > 0) {
             return $users[0];
         }
@@ -32,6 +32,7 @@ class User_model extends MY_Model
             return false;
         }
 
+        $user['password'] = md5($user['password']);
         unset($user['repassword']);
         if ($this->create($user)) {
             $users =  $this->find_by('id', $this->db->insert_id());
