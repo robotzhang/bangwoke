@@ -4,6 +4,7 @@
 <div class="users">
     <form class="form-vertical" method="post" action="<?php echo site_url() ?>/login">
         <fieldset>
+            <input type="hidden" name="url" value="<?php echo isset($_GET['url']) ? $_GET['url'] : site_url()?>" />
             <?php if (!empty($errors)): ?>
             <div class="control-group">
                 <div class="errors"><?php echo $errors['all'] ?></div>
