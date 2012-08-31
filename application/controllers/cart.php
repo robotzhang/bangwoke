@@ -85,9 +85,12 @@ class Cart extends CI_Controller {
     // 支付宝支付结果异步通知页面
     public function notify()
     {
-        log_message('error', 'do_notify');
         $this->load->model('alipay_model', 'alipay');
-        $this->alipay->notify_verify($this->input->post());
+        if ($this->alipay->notify_verify($this->input->post())) {
+            echo "success";		//请不要修改或删除,这个必须输出，否则会一直发送请求
+        } else {
+            echo 'fail';
+        };
     }
 
     // 支付宝支付完成后返回的页面

@@ -50,9 +50,7 @@ class Alipay_model extends MY_Model
     {
         $this->load->library('alipay/alipay_notify', $this->alipay_config);
         $verify_result = $this->alipay_notify->verifyNotify();
-        log_message('error', 'notify_verify'.$verify_result);
         if($verify_result) {
-            log_message('error', 'notify_verify'.$data['trade_status']);
             $this->load->model('Order_model', 'order');
             switch ($data['trade_status']) {
                 case 'WAIT_BUYER_PAY': // 等待付款
@@ -79,10 +77,8 @@ class Alipay_model extends MY_Model
     {
         $this->load->library('alipay/alipay_notify', $this->alipay_config);
         $verify_result = $this->alipay_notify->verifyReturn();
-        log_message('error', 'return_verify'.$verify_result);
         if ($verify_result) {//验证成功
             if ($data['trade_status'] == 'WAIT_SELLER_SEND_GOODS') { // 已支付，等待发货
-                log_message('error', 'return_verify'.$data['trade_status']);
                 return $this->update_order_for_pay($data);
             }
         } else {
