@@ -9,34 +9,66 @@ class Alipay_model extends MY_Model
         $this->config->load('alipay', TRUE);
         $this->alipay_config = $this->config->item('alipay');
     }
+
+    // 用户已付款
+    public function update_order_for_pay($data)
+    {
+        // 更新订单
+        $order = array(
+            'id' => $data['out_trade_no'],
+            'pay_at' => $data['gmt_payment'],
+            'status' => 1,
+            'alipay_id' => $data['trade_no'],
+            'alipay_email' => $data['buyer_email'],
+            'alipay_order_id' => $data['buyer_id']
+        );
+        $this->load->model('Order_model', 'order');
+        if ($this->order->update($order)) { // 更新
+            // 添加收货地址
+            $address = array(
+                'user_id' => current($this->order->find_by('id', $order['id']))->user_id,
+                'address' => $data['receive_address'],
+                'zip' => $data['receive_zip']
+            );
+            if (!empty($data['receive_phone'])) {
+                $address['phone'] = $data['receive_phone'];
+            }
+            if (!empty($data['receive_mobile'])) {
+                $address['mobile'] = $data['receive_mobile'];
+            }
+            $this->load->model('Address_model', 'address');
+            return $this->address->create($address);
+        } else {
+            return false;
+        }
+    }
+
     /**
      * 服务器异步通知
      */
-    function notify_verify ()
+    function notify_verify ($data)
     {
-        $tmp = array(
-            'partner'        => $this->alipay_config['partner'],
-            'key'            => $this->alipay_config['key'],
-            'sign_type'      => $this->alipay_config['sign_type'],
-            '_input_charset' => $this->alipay_config['input_charset'],
-            'transport'      => $this->alipay_config['transport'],
-        );
-
         $this->load->library('alipay/alipay_notify', $this->alipay_config);
-        $verify_result = $this->alipay_notify->notify_verify();
-
+        $verify_result = $this->alipay_notify->verifyNotify();
+        log_message('error', 'notify_verify'.$verify_result);
         if($verify_result) {
-            $dingdan           = $_POST['out_trade_no'];	//获取支付宝传递过来的订单号
-            $total             = $_POST['total_fee'];		//获取支付宝传递过来的总价格
-
-            if($_POST['trade_status'] == 'TRADE_FINISHED' ||$_POST['trade_status'] == 'TRADE_SUCCESS') {    //交易成功结束
-                echo "success";		//请不要修改或删除
-            } else {
-                echo "success";		//其他状态判断。普通即时到帐中，其他状态不用判断，直接打印success。
+            log_message('error', 'notify_verify'.$data['trade_status']);
+            $this->load->model('Order_model', 'order');
+            switch ($data['trade_status']) {
+                case 'WAIT_BUYER_PAY': // 等待付款
+                    break;
+                case 'WAIT_SELLER_SEND_GOODS': // 等待卖家发货
+                    return $this->update_order_for_pay($data);
+                    break;
+                case 'WAIT_BUYER_CONFIRM_GOODS': // 等待买家确认发货
+                    return $this->order->update(array('id' => $data['out_trade_no'], 'status' => 2));
+                    break;
+                case 'TRADE_FINISHED': // 订单完成
+                    return $this->order->update(array('id' => $data['out_trade_no'], 'status' => 3));
+                    break;
             }
-            self::update_status($_POST['trade_no'], $dingdan);
         } else {
-            echo "fail";
+            return false;
         }
     }
 
@@ -46,37 +78,12 @@ class Alipay_model extends MY_Model
     function return_verify($data)
     {
         $this->load->library('alipay/alipay_notify', $this->alipay_config);
-        $verify_result = true;//$this->alipay_notify->verifyReturn();
+        $verify_result = $this->alipay_notify->verifyReturn();
+        log_message('error', 'return_verify'.$verify_result);
         if ($verify_result) {//验证成功
             if ($data['trade_status'] == 'WAIT_SELLER_SEND_GOODS') { // 已支付，等待发货
-                // 更新订单
-                $order = array(
-                    'id' => $data['out_trade_no'],
-                    'pay_at' => $data['gmt_payment'],
-                    'status' => 1,
-                    'alipay_id' => $data['trade_no'],
-                    'alipay_email' => $data['buyer_email'],
-                    'alipay_order_id' => $data['buyer_id']
-                );
-                $this->load->model('Order_model', 'order');
-                if ($this->order->update($order)) { // 更新
-                    // 添加收货地址
-                    $address = array(
-                        'user_id' => current($this->order->find_by('id', $order['id']))->user_id,
-                        'address' => $data['receive_address'],
-                        'zip' => $data['receive_zip']
-                    );
-                    if (!empty($data['receive_phone'])) {
-                        $address['phone'] = $data['receive_phone'];
-                    }
-                    if (!empty($data['receive_mobile'])) {
-                        $address['mobile'] = $data['receive_mobile'];
-                    }
-                    $this->load->model('Address_model', 'address');
-                    return $this->address->create($address);
-                } else {
-                    return false;
-                }
+                log_message('error', 'return_verify'.$data['trade_status']);
+                return $this->update_order_for_pay($data);
             }
         } else {
             return false;

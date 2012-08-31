@@ -8,7 +8,6 @@ class Address_model extends MY_Model
         if (count($this->db->where(array('address' => $entity['address'], 'user_id' => $entity['user_id']))->get($this->table)->result()) > 0) { // 该地址已经存在
             return false;
         }
-        echo 'ok';
         return parent::create($entity);
     }
 }
