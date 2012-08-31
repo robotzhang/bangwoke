@@ -34,7 +34,7 @@
     </div>
     <div class="clearfix" style="padding: 13px;">
         <ul class="goods unstyled">
-            <li><b>价格</b><strong>50.00</strong> 元</li>
+            <li><b>价格</b><strong><?php echo $topic->price ?></strong> 元</li>
             <li><b>促销</b>全场免邮</li>
             <li><b>电影数量</b> 10 部</li>
             <li><b>碟片数量</b>10 张
