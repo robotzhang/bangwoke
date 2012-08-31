@@ -92,6 +92,7 @@ class Cart extends CI_Controller {
     public function back()
     {
         $this->load->model('alipay_model', 'alipay');
-        var_dump( $this->alipay->return_verify($this->input->get()) );
+        $this->alipay->return_verify($this->input->get());
+        redirect(site_url()); //应该返回用户订单页
     }
 }
