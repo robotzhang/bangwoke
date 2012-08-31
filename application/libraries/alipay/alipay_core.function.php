@@ -124,41 +124,15 @@ function logResult($word='') {
  * return 远程输出的数据
  */
 function getHttpResponse($url, $input_charset = '', $time_out = "60") {
-	$urlarr     = parse_url($url);
-	$errno      = "";
-	$errstr     = "";
-	$transports = "";
-	$responseText = "";
-	if($urlarr["scheme"] == "https") {
-		$transports = "ssl://";
-		$urlarr["port"] = "443";
-	} else {
-		$transports = "tcp://";
-		$urlarr["port"] = "80";
-	}
-	$fp=@fsockopen($transports . $urlarr['host'],$urlarr['port'],$errno,$errstr,$time_out);
-	if(!$fp) {
-		die("ERROR: $errno - $errstr<br />\n");
-	} else {
-		if (trim($input_charset) == '') {
-			fputs($fp, "POST ".$urlarr["path"]." HTTP/1.1\r\n");
-		}
-		else {
-			fputs($fp, "POST ".$urlarr["path"].'?_input_charset='.$input_charset." HTTP/1.1\r\n");
-		}
-		fputs($fp, "Host: ".$urlarr["host"]."\r\n");
-		fputs($fp, "Content-type: application/x-www-form-urlencoded\r\n");
-		fputs($fp, "Content-length: ".strlen($urlarr["query"])."\r\n");
-		fputs($fp, "Connection: close\r\n\r\n");
-		fputs($fp, $urlarr["query"] . "\r\n\r\n");
-		while(!feof($fp)) {
-			$responseText .= @fgets($fp, 1024);
-		}
-		fclose($fp);
-		$responseText = trim(stristr($responseText,"\r\n\r\n"),"\r\n");
-		
-		return $responseText;
-	}
+    /* 不支持fsockopen + ssl   使用CURL改写 */
+    $ch = curl_init();
+    curl_setopt ($ch, CURLOPT_URL, $url);
+    curl_setopt ($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $time_out);
+    $responseText = curl_exec($ch);
+    curl_close($ch);
+    return $responseText;
 }
 /**
  * 实现多种字符编码方式

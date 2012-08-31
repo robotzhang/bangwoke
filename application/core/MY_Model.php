@@ -27,6 +27,13 @@ class MY_Model extends CI_Model
         }
         return $this->db->insert($this->table, $entity);
     }
+
+    public function update($entity) {
+        if ($this->db->field_exists('updated_at', $this->table)) {
+            $entity['updated_at'] = date('Y-m-d H:i:s');
+        }
+        return $this->db->where('id', $entity['id'])->update($this->table, $entity);
+    }
 }
 
 /* End of file MY_Model.php */

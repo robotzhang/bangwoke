@@ -91,6 +91,7 @@ class Cart extends CI_Controller {
     // 支付宝支付完成后返回的页面
     public function back()
     {
-
+        $this->load->model('alipay_model', 'alipay');
+        var_dump( $this->alipay->return_verify($this->input->get()) );
     }
 }
