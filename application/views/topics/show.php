@@ -77,9 +77,11 @@
             <div class="movie_info">
                 <div class="pop-triangle"></div>
                 <div style="line-height: 25px;">
-                    <strong>
-                    <?php echo !empty($movie->name_cn) && $movie->name_cn != $movie->name ? $movie->name_cn.' / '.$movie->name : $movie->name ?>
-                    </strong>
+                    <a target="_blank" style="color: #333;" href="<?php echo site_url('movies/'.$movie->id) ?>">
+                        <strong>
+                            <?php echo !empty($movie->name_cn) && $movie->name_cn != $movie->name ? $movie->name_cn.' / '.$movie->name : $movie->name ?>
+                        </strong>
+                    </a>
                     <div class="pull-right">
                         <span><?php echo $movie->year ?></span>年
                         / <span><?php echo $movie->country ?></span>

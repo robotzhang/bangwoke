@@ -6,6 +6,12 @@ class Topics extends CI_Controller {
         $this->load->model('Topic_model', 'topic');
     }
 
+    public function index()
+    {
+        $records = $this->topic->db->get($this->topic->table)->result();
+        $this->layout->view('topics/index', array('records' => $records));
+    }
+
 	public function show($id = 1) {
         $topic = $this->topic->find_by('id', $id);
         $topic = $this->topic->set_movies($topic);
