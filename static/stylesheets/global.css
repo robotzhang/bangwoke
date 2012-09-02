@@ -2,7 +2,7 @@ body, p, table{ font-size: 13px; font-family: "微软雅黑", YaHei, "Helvetica 
 a, a:hover { color: #4183C4; }
 .btn i { margin-top: 2px; }
 .btn-large [class^="icon-"] {   margin-top: 3px; }
-input, textarea, select, .uneditable-input { height: 28px; }
+input, select, .uneditable-input { height: 28px; }
 blockquote { background: url(../images/common/blockquote.png) 0 0 no-repeat; border-left: none; padding: 5px 0 5px 40px; margin-bottom: 10px; }
 blockquote .blockquote_right { background: url(../images/common/blockquote1.png) right bottom no-repeat; padding-bottom: 5px; padding-right: 30px; }
 .form-actions { background: none; border-top: none; }
