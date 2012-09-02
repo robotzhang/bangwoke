@@ -16,7 +16,7 @@ class Cart extends CI_Controller {
     {
         $data = $this->input->post('cart');
         $this->cart->insert($data);
-        redirect(site_url().'/cart');
+        redirect(site_url('/cart'));
     }
 
     // 从购物车中移除
@@ -27,19 +27,19 @@ class Cart extends CI_Controller {
             'qty'   => 0 // 数量设置成0 则会删除
         );
         $this->cart->update($data);
-        redirect(site_url().'/cart');
+        redirect(site_url('cart'));
     }
 
     // 到支付宝支付
     public function todo()
     {
         if (!is_login()) {
-            return redirect(site_url().'/login?url='.site_url().'/cart');
+            return redirect(site_url('login?url='.site_url('cart')));
         }
         // 如果购物车为空则返回出错提示
         $cart_items = $this->cart->contents();
         if (empty($cart_items)) {
-            return redirect(site_url().'/cart');
+            return redirect(site_url('cart'));
         }
         // 添加订单
         $order = array(
@@ -76,7 +76,7 @@ class Cart extends CI_Controller {
             'order_id' => $order_obj->id,
             'subject' => $order_obj->subject,
             'body' => '',
-            'show_url' => site_url().'/orders/'.$order_obj->id,
+            'show_url' => site_url('orders/'.$order_obj->id),
             'price' => $order_obj->total
         );
         echo $this->alipay->build_form($alipay_form); // 还应该配置收货地址等，这样用户不用在支付宝去做这个事情了(用户支付宝就用地址？)

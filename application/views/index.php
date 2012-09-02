@@ -16,7 +16,7 @@
     .slide_nav li.current a, .slide_nav a:hover { border-color: #fff; }
 </style>
 
-<script src="<?php echo base_url() ?>/static/javascripts/plugins/slides.min.jquery.js"></script>
+<script src="<?php echo base_url('static/javascripts/plugins/slides.min.jquery.js') ?>"></script>
 <script>
     $(document).ready(function() {
         $(".home_header").slides({
@@ -41,8 +41,8 @@
 </script>
 
 <div class="home_header_bg">
-    <div id="topic_img_1" style="background: url(<?php echo base_url() ?>/static/images/home/topic1.jpg) center center;"></div>
-    <div id="topic_img_2" style="background: url(<?php echo base_url() ?>/static/images/home/topic2.jpg) center center;"></div>
+    <div id="topic_img_1" style="background: url(<?php echo base_url('static/images/home/topic1.jpg') ?>) center center;"></div>
+    <div id="topic_img_2" style="background: url(<?php echo base_url('static/images/home/topic2.jpg') ?>) center center;"></div>
 </div>
 <div class="home_header clearfix">
     <div class="slides_container clearfix pull-left">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="buy_action">
                     男人必看10部电影...
-                    <a target="_blank" class="btn btn-danger" href="<?php echo site_url() ?>/topics/1">即刻拥有 >> </a>
+                    <a target="_blank" class="btn btn-danger" href="<?php echo site_url('topics/1') ?>">即刻拥有 >> </a>
                 </div>
             </blockquote>
             <div class="movie_list clearfix">
@@ -79,7 +79,7 @@
                 </div>
                 <div class="buy_action">
                     女人必看10部电影...
-                    <a target="_blank" class="btn btn-danger" href="<?php echo site_url() ?>/topics/2">即刻拥有 >> </a>
+                    <a target="_blank" class="btn btn-danger" href="<?php echo site_url('topics/2') ?>">即刻拥有 >> </a>
                 </div>
             </blockquote>
             <div class="movie_list">
@@ -106,21 +106,21 @@
 
 <div class="row">
     <div class="span4">
-        <div class="pull-left"><img src="<?php echo base_url() ?>/static/images/home/logo_alipay.gif"/></div>
+        <div class="pull-left"><img src="<?php echo base_url('static/images/home/logo_alipay.gif') ?>"/></div>
         <div style="border-right: #999 1px dotted; padding: 0 10px;">
             <p><strong>支付宝担保交易</strong></p>
             <div>快捷、<strong>安全</strong>、方便。我们致力于做最好的支付体验！</div>
         </div>
     </div>
     <div class="span4">
-        <div class="pull-left"><img src="<?php echo base_url() ?>/static/images/home/heart_and_rose.png"/></div>
+        <div class="pull-left"><img src="<?php echo base_url('static/images/home/heart_and_rose.png') ?>"/></div>
         <div style="border-right: #999 1px dotted; padding: 0 10px;">
             <p><strong>用心服务</strong></p>
             <div>专业的团队保证货品质量，客服永不下线！</div>
         </div>
     </div>
     <div class="span4">
-        <div class="pull-left"><img src="<?php echo base_url() ?>/static/images/home/song.png"/></div>
+        <div class="pull-left"><img src="<?php echo base_url('static/images/home/song.png') ?>"/></div>
         <div style="padding: 0 10px;">
             <p><strong>可选的、快捷的物流</strong></p>
             <div>发货选择最快、最安全的物流！</div>

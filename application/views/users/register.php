@@ -2,7 +2,7 @@
     .users { margin: 0 auto; width: 400px; }
 </style>
 <div class="users">
-    <form class="form-vertical" method="post" action="<?php echo site_url() ?>/register">
+    <form class="form-vertical" method="post" action="<?php echo site_url('register') ?>">
         <fieldset>
             <input type="hidden" name="url" value="<?php echo isset($_GET['url']) ? $_GET['url'] : site_url()?>" />
             <?php if (!empty($errors)): ?>
@@ -31,7 +31,7 @@
             <div class="control-group">
                 <div class="controls">
                     <button class="btn btn-primery" type="submit">注册</button>
-                    <span style="font-size: 12px; color: #777; margin-left: 10px;">已有账号？<a href="<?php echo site_url() ?>/login">登陆</a></span>
+                    <span style="font-size: 12px; color: #777; margin-left: 10px;">已有账号？<a href="<?php echo site_url('login') ?>">登陆</a></span>
                 </div>
             </div>
         </fieldset>

@@ -1,4 +1,4 @@
-<form class="form-horizontal" method="post" action="<?php echo site_url() ?>/admin/create_topic">
+<form class="form-horizontal" method="post" action="<?php echo site_url('admin/create_topic') ?>">
     <fieldset>
         <legend>新建一个电影专题</legend>
         <div class="control-group">

@@ -21,7 +21,7 @@
     .movies .movie_img { float: left; box-shadow: 0 1px 2px #B0B3B6; border:#DADEE1 1px solid; border-radius: 5px; padding: 1px; }
     .movies .movie_img img { width: 67px;  border-radius: 5px; }
     .movies .movie_info { margin-left: 90px; box-shadow: 0 1px 2px #B0B3B6; padding: 15px; border:#DADEE1 1px solid; border-radius: 5px; }
-    .movies .movie_info .pop-triangle { width: 13px; height: 17px; position: absolute; margin-left: -28px; margin-top: 10px; background: url(<?php echo base_url() ?>/static/images/common/narrow.png);  }
+    .movies .movie_info .pop-triangle { width: 13px; height: 17px; position: absolute; margin-left: -28px; margin-top: 10px; background: url(<?php echo base_url('static/images/common/narrow.png') ?>);  }
 </style>
 
 <a name="buy"></a>
@@ -43,7 +43,7 @@
             </li>
         </ul>
         <div class="buys">
-            <form action="<?php echo site_url() ?>/cart/add" method="post">
+            <form action="<?php echo site_url('cart/add') ?>" method="post">
                 <input type="hidden" name="cart[goods_type]" value="topic" />
                 <input type="hidden" name="cart[goods_id]" value="<?php echo $topic->id ?>" />
                 <input type="hidden" name="cart[id]" value="sku_topic_<?php echo $topic->id ?>" />

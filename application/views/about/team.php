@@ -20,7 +20,7 @@
                 “ 快速获取值得珍藏的电影 ”
             </div>
             <div class="span3" style="margin-top: 15px;">
-                <img src="<?php echo base_url() ?>/static/images/about/eve_128_128.png" />
+                <img src="<?php echo base_url('static/images/about/eve_128_128.png') ?>" />
             </div>
         </div>
     </div>
@@ -28,8 +28,8 @@
         <div class="span3">
             <div class="about_menu">
                 <ul class="unstyled">
-                    <li><a href="<?php echo site_url() ?>/about">关于我们</a></li>
-                    <li><a class="selected" href="<?php echo site_url() ?>/about/team">选片团队</a></li>
+                    <li><a href="<?php echo site_url('about') ?>">关于我们</a></li>
+                    <li><a class="selected" href="<?php echo site_url('about/team') ?>">选片团队</a></li>
                     <li><a href="javascript:void(0);">理念态度</a></li>
                     <li><a href="javascript:void(0);">联系我们</a></li>
                     <li><a href="javascript:void(0);">意见反馈</a></li>

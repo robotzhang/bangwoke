@@ -1,4 +1,4 @@
-<form class="form-horizontal" method="post" action="<?php echo site_url() ?>/admin/create_movie">
+<form class="form-horizontal" method="post" action="<?php echo site_url('admin/create_movie') ?>">
     <fieldset>
         <legend>将从豆瓣爬取的数据入库</legend>
         <?php foreach ($movie as $k => $v): ?>

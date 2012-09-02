@@ -2,7 +2,7 @@
     .cart { color: #666; }
     .cart .steps { margin-bottom: 10px; }
     .cart .steps li { float: left; height: 25px; line-height: 25px; font-weight: 700; text-align: center; width: 162px; background-color: #F1F1F1; color: #999; }
-    .cart .steps li b { width: 22px; height: 25px; display: block; float: right; background: url(<?php echo base_url() ?>/static/images/cart/progress_bg.png) no-repeat; }
+    .cart .steps li b { width: 22px; height: 25px; display: block; float: right; background: url(<?php echo base_url('static/images/cart/progress_bg.png') ?>) no-repeat; }
     .cart .steps li b.step_1 { background-position: 0 -25px; }
     .cart .steps li b.step_2 {  }
     .cart .steps .current { color: #F60; background-color: #FFE6BC; }
@@ -44,7 +44,7 @@
                 <td style="color: #333;">￥<?php echo $this->cart->format_number($items['price']); ?></td>
                 <td style="color: #999;">现货</td>
                 <td><?php echo $items['qty']; ?></td>
-                <td><a href="<?php echo site_url().'/cart/remove?rowid='.$items['rowid'] ?>">删除</a></td>
+                <td><a href="<?php echo site_url('/cart/remove?rowid='.$items['rowid']) ?>">删除</a></td>
             </tr>
             <?php endforeach ?>
             <tr>
@@ -63,6 +63,6 @@
 
     <div class="actions">
         <a class="btn btn-large primary" href="<?php echo site_url() ?>">继续购物</a>
-        <a class="btn btn-large btn-danger pull-right" href="<?php echo site_url() ?>/cart/todo"><b>去结算</b></a>
+        <a class="btn btn-large btn-danger pull-right" href="<?php echo site_url('cart/todo') ?>"><b>去结算</b></a>
     </div>
 </div>

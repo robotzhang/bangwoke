@@ -25,7 +25,7 @@ class Users extends CI_Controller {
     public function logout()
     {
         $this->session->unset_userdata('user');
-        redirect(site_url().'/login');
+        redirect(site_url('login'));
     }
 
     public function register()

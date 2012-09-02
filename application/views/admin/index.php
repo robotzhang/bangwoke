@@ -1,4 +1,4 @@
-<form class="form-horizontal" method="get" action="<?php echo site_url() ?>/admin/spider">
+<form class="form-horizontal" method="get" action="<?php echo site_url('admin/spider') ?>">
     <fieldset>
         <legend>从豆瓣爬取数据</legend>
         <?php if ($this->session->flashdata('info')): ?>

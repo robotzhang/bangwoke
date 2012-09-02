@@ -9,13 +9,13 @@ $config['key']   			= "q5jkqb0yxm9m38jh1dpebdwv6d4rujzm";
 $config['seller_email']	= "cqurobot@163.com";
 
 //交易过程中服务器通知的页面 要用 http://格式的完整路径，不允许加?id=123这类自定义参数
-$config['notify_url']		= site_url()."/cart/notify";
+$config['notify_url']		= site_url("cart/notify");
 
 //付完款后跳转的页面 要用 http://格式的完整路径，不允许加?id=123这类自定义参数
-$config['return_url']		= site_url()."/cart/back";
+$config['return_url']		= site_url("cart/back");
 
 //网站商品的展示地址，不允许加?id=123这类自定义参数
-$config['show_url']		= site_url()."/topics/1";
+$config['show_url']		= site_url("topics/1");
 
 //收款方名称，如：公司名称、网站名称、收款人姓名等
 $config['mainname']		= "帮我客"; // 新版的已经不能自定义收款方名称了，必须是实名...
