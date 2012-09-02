@@ -1,3 +1,4 @@
+<?php $this->layout->setLayout(array('title' => ' 帮我客 -- 我的购物车')); ?>
 <style type="text/css">
     .cart { color: #666; }
     .cart .steps { margin-bottom: 10px; }

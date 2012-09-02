@@ -1,3 +1,4 @@
+<?php $this->layout->setLayout(array('title' => '帮我客 -- 注册')); ?>
 <style type="text/css">
     .users { margin: 0 auto; width: 400px; }
 </style>

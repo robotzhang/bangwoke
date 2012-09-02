@@ -1,4 +1,4 @@
-<?php $this->layout->setLayout(array('title' => '影集大全 -- 帮我客')); ?>
+<?php $this->layout->setLayout(array('title' => '帮我客 -- 影集大全')); ?>
 <ul class="unstyled">
     <?php foreach ($records as $record): ?>
     <li>

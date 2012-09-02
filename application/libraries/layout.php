@@ -12,9 +12,9 @@ class Layout
         'title' => '帮我客--快速找到珍藏的内容',
         'css' => array(),//需要加载的自定义css文件，这里设计成了全路径
         'javascript' => array(),
-        'content' => '未指定的显示内容',
-        'keywords' => '',
-        'description' => '帮我客'
+        'content' => '',
+        'keywords' => '电影,经典电影,高清电影,经典,高清,电影推荐,电影发现,影院,碟片,电影碟片',
+        'description' => '在帮我客快速找到值得珍藏的电影并且刻成高质量的碟片。也可以指定要刻制的内容，方便存储、欣赏，以及与朋友分享'
     );
     
     function Layout($layout = "layout/default")

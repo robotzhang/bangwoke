@@ -1,3 +1,4 @@
+<?php $this->layout->setLayout(array('title' => '帮我客 -- 选片团队')); ?>
 <style type="text/css">
     .site { padding-top: 0; }
     .about .about_header { position: absolute; left: 0; width: 100%; height: 170px;background: url(https://a248.e.akamai.net/assets.github.com/images/modules/about_page/parallax_bg.jpg?1340935010) 0 0 repeat-x; }

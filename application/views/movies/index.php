@@ -1,3 +1,4 @@
+<?php $this->layout->setLayout(array('title' => '帮我客 -- 电影大全')); ?>
 <style type="text/css">
     .movies li { margin-bottom: 20px; }
     .movies .movie_img { float: left; box-shadow: 0 1px 2px #B0B3B6; border:#DADEE1 1px solid; border-radius: 5px; padding: 1px; }
@@ -5,7 +6,7 @@
     .movies .movie_info { margin-left: 90px; box-shadow: 0 1px 2px #B0B3B6; padding: 15px; border:#DADEE1 1px solid; border-radius: 5px; }
     .movies .movie_info .pop-triangle { width: 13px; height: 17px; position: absolute; margin-left: -28px; margin-top: 10px; background: url(<?php echo base_url('static/images/common/narrow.png') ?>);  }
 </style>
-<?php $this->layout->setLayout(array('title' => '电影大全 -- 帮我客')); ?>
+
 <ul class="movies unstyled">
     <?php foreach ($movies as $movie): ?>
     <li>

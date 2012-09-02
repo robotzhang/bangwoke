@@ -1,3 +1,4 @@
+<?php $this->layout->setLayout(array('title' => '帮我客 -- '.$topic->name)); ?>
 <style type="text/css">
     /*.site { background: url(http://movieso.b0.upaiyun.com/movie/71b928df2e9e23877fa6da753cf225dc.jpg) 0 0 no-repeat; background-size: cover; }*/
     .dashboard { color: #333; background-color: #FFFFF5; border: #E7E7CE 1px solid; border-radius: 5px; }
