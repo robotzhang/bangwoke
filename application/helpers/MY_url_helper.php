@@ -27,5 +27,26 @@ if ( ! function_exists('is_login'))
     }
 }
 
+if ( ! function_exists('movie_name') )
+{
+    function movie_name($movie) {
+        return !empty($movie->name_cn) && $movie->name_cn != $movie->name ? $movie->name_cn.' / '.$movie->name : $movie->name;
+    }
+}
+
+if ( ! function_exists('is_admin') )
+{
+    function is_admin() {
+        $user = current_user();
+        if (empty($user)) {
+            return false;
+        }
+        if ($user->role !== 'admin') {
+            return false;
+        }
+        return true;
+    }
+}
+
 /* End of file MY_url_helper.php */
 /* Location: ./application/help/MY_url_helper.php */

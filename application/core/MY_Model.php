@@ -10,6 +10,7 @@
 class MY_Model extends CI_Model
 {
     var $table = ''; //表名
+    var $last_query_number = 0; // 上次查询的结果总数
     public function __construct() {
         parent::__construct();
     }
@@ -33,6 +34,26 @@ class MY_Model extends CI_Model
             $entity['updated_at'] = date('Y-m-d H:i:s');
         }
         return $this->db->where('id', $entity['id'])->update($this->table, $entity);
+    }
+
+    public function get($where = array(), $page = 1, $offset = 20)
+    {
+        if (!empty($where)) {
+            $this->db->where($where);
+        }
+
+        $db_count = clone $this->db;
+        $this->last_query_number = $db_count->count_all_results($this->table);
+
+        $this->db->limit($offset, ($page - 1) * $offset);
+        $this->db->order_by('id', 'desc');//默认按id降序排
+
+        return $this->db->get($this->table)->result();
+    }
+
+    public function delete($id)
+    {
+        return $this->db->where(array('id' => $id))->delete($this->table);
     }
 }
 

@@ -1,9 +1,9 @@
-<form class="form-horizontal" method="get" action="<?php echo site_url('admin/spider') ?>">
+<form class="form-horizontal" method="get" action="<?php echo site_url('admin/movies/spider') ?>">
     <fieldset>
         <legend>从豆瓣爬取数据</legend>
         <?php if ($this->session->flashdata('info')): ?>
         <div class="control-group">
-            <div class="badge badge-warning"><?php echo $this->session->flashdata('info') ?></div>
+            <div class="errors"><?php echo $this->session->flashdata('info') ?></div>
         </div>
         <?php endif ?>
         <div class="control-group">

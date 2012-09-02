@@ -6,6 +6,7 @@
     <form class="form-vertical" method="post" action="<?php echo site_url('register') ?>">
         <fieldset>
             <input type="hidden" name="url" value="<?php echo isset($_GET['url']) ? $_GET['url'] : site_url()?>" />
+            <input type="hidden" name="user[ip]" value="<?php echo $this->input->ip_address() ?>" />
             <?php if (!empty($errors)): ?>
             <div class="control-group">
                 <div class="errors"><?php echo join(',', $errors) ?></div>

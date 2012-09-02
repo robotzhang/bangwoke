@@ -1,8 +1,7 @@
-<?php $movie_name = !empty($movie->name_cn) && $movie->name_cn != $movie->name ? $movie->name_cn.' / '.$movie->name : $movie->name; ?>
-<?php $this->layout->setLayout(array('title' => '帮我客 -- '.$movie_name)); ?>
+<?php $this->layout->setLayout(array('title' => '帮我客 -- '.movie_name($movie))); ?>
 <a style="color: #333;" href="<?php echo site_url('movies/'.$movie->id) ?>">
     <strong>
-        <?php echo $movie_name ?>
+        <?php echo movie_name($movie) ?>
     </strong>
 </a>
 <div class="pull-right">

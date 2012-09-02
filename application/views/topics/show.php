@@ -80,7 +80,7 @@
                 <div style="line-height: 25px;">
                     <a target="_blank" style="color: #333;" href="<?php echo site_url('movies/'.$movie->id) ?>">
                         <strong>
-                            <?php echo !empty($movie->name_cn) && $movie->name_cn != $movie->name ? $movie->name_cn.' / '.$movie->name : $movie->name ?>
+                            <?php echo movie_name($movie) ?>
                         </strong>
                     </a>
                     <div class="pull-right">

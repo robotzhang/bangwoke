@@ -23,7 +23,7 @@
             generatePagination: false,
             paginationClass: 'slide_nav',
             generateNextPrev: false,
-            hoverPause: true,
+            //hoverPause: true,
             play: 5000, // 自动播放
             animationComplete: function() {
                 var id = $('.slide_nav .current').attr('show');
@@ -130,5 +130,5 @@
 </div>
 
 <div class="container" style="margin-top: 40px; color: #999; font-size: 12px; margin-bottom: -30px;">
-    本站资源全部来自互联网仅供学习参考，请勿传播。 bangwoke.com不承担任何由于内容的合法性及健康性所引起的争议和法律责任。如您认为网友所发内容侵犯您的权益 请邮件告知给我们,收到邮件并确认后24小时内删除, 我们的邮件地址是： contact@bangwoke.com
+    本站资源全部来自互联网仅供学习参考，请勿传播。 bangwoke.com不承担任何由于内容的合法性及健康性所引起的争议和法律责任。如您认为网友所发内容侵犯您的权益 请邮件告知给我们,收到邮件并确认后24小时内删除, 我们的邮件地址是： service@bangwoke.com
 </div>

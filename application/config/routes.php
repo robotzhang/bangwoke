@@ -9,5 +9,7 @@ $route['login'] = "users/login";
 $route['logout'] = "users/logout";
 $route['register'] = "users/register";
 
+$route['admin'] = "admin/admin";
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
