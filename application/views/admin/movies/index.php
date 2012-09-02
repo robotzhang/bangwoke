@@ -13,6 +13,7 @@
         <tr>
             <th>id</th>
             <th>名称</th>
+            <th>影集</th>
             <th>豆瓣id</th>
             <td>操作</td>
         </tr>
@@ -22,6 +23,7 @@
         <tr>
             <td><?php echo $movie->id ?></td>
             <td><?php echo movie_name($movie) ?></td>
+            <td><?php echo $movie->topic_id ?></td>
             <td><?php echo $movie->douban_id ?></td>
             <td>
                 <a title="编辑" href="<?php echo site_url('admin/movies/edit?id='.$movie->id) ?>"><i class="icon-edit"></i></a>
