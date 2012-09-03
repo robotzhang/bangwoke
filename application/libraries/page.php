@@ -13,7 +13,7 @@ class Page
     var $base_url = '';//分页基本链接
     var $total = 0;//总记录数
     var $offset = 20; //每页显示条数
-	var $template = 'component/page.php'; //分页模板所在位置
+	var $template = 'common/page.php'; //分页模板所在位置
     
     function Page($config)
     {

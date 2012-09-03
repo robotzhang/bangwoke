@@ -38,6 +38,9 @@ class MY_Model extends CI_Model
 
     public function get($where = array(), $page = 1, $offset = 20)
     {
+        if (!is_numeric($page)) {
+            $page = 1;
+        }
         if (!empty($where)) {
             $this->db->where($where);
         }

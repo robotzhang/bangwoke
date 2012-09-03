@@ -9,3 +9,4 @@
     </li>
     <?php endforeach ?>
 </ul>
+<div class="pagination pagination-centered"><?php echo $pagination; ?></div>

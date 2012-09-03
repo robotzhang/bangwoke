@@ -104,6 +104,10 @@
     </ul>
 </div>
 
+<div style="margin-bottom: 30px;">
+    kdkdkd
+</div>
+
 <div class="row">
     <div class="span4">
         <div class="pull-left"><img src="<?php echo base_url('static/images/home/logo_alipay.gif') ?>"/></div>
