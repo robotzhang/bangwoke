@@ -12,8 +12,9 @@ class Topics extends CI_Controller {
 
     public function index()
     {
-        $topics = $this->topic->get(array(), 1);
-        $this->layout->view('admin/topics/index', array('topics' => $topics));
+        $topics = $this->topic->get(array(), $this->input->get('page'), 20);
+        $this->load->library('page', array('total' => $this->topic->last_query_number));
+        $this->layout->view('admin/topics/index', array('topics' => $topics, 'pagination' => $this->page->create()));
     }
 
     public function create()

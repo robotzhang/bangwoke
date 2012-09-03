@@ -12,8 +12,9 @@ class Movies extends CI_Controller {
 
     public function index()
     {
-        $movies = $this->movie->get(array(), 1);
-        $this->layout->view('admin/movies/index', array('movies' => $movies));
+        $movies = $this->movie->get(array(), $this->input->get('page'), 20);
+        $this->load->library('page', array('total' => $this->movie->last_query_number));
+        $this->layout->view('admin/movies/index', array('movies' => $movies, 'pagination' => $this->page->create()));
     }
 
     public function create()
