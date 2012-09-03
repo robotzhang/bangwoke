@@ -104,9 +104,9 @@
     </ul>
 </div>
 
-<div style="margin-bottom: 30px;">
-    kdkdkd
-</div>
+<!--div style="margin-bottom: 30px;">
+
+</div-->
 
 <div class="row">
     <div class="span4">
