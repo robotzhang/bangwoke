@@ -11,11 +11,11 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>id</th>
+            <th width="40">id</th>
             <th>名称</th>
-            <th>影集</th>
-            <th>豆瓣id</th>
-            <td>操作</td>
+            <th width="40">影集</th>
+            <th width="40">豆瓣id</th>
+            <td width="50">操作</td>
         </tr>
     </thead>
     <tbody>

@@ -37,7 +37,7 @@
         <ul class="goods unstyled">
             <li><b>价格</b><strong><?php echo $topic->price ?></strong> 元</li>
             <li><b>促销</b>全场免邮</li>
-            <li><b>电影数量</b> 10 部</li>
+            <li><b>电影数量</b> <?php echo count($topic->movies) ?> 部</li>
             <li><b>碟片数量</b>10 张
                 <span class="label label-info">DVD</span>
                 <span class="label label-info">高清</span>
