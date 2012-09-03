@@ -7,7 +7,7 @@
                 购物车 <span style="color: #DA4F49;"><?php echo $this->cart->total_items() ?></span>
             </a>
             欢迎：<?php echo substr(current_user()->email, 0, strpos(current_user()->email, '@')); ?>
-            <a href="<?php echo site_url('logout?url='.current_url()) ?>">退出</a>
+            <a href="<?php echo site_url('logout?url='.current_url()) ?>"><i class="icon-off"></i>退出</a>
             <?php else: ?>
             <ul class="unstyled clearfix pull-right">
                 <li>
