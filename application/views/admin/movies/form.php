@@ -1,13 +1,7 @@
 <form class="form-horizontal" method="post" action="<?php echo site_url(empty($movie) ? 'admin/movies/create' : 'admin/movies/update') ?>">
     <fieldset>
         <legend><?php echo empty($movie) ? '新建' : '编辑' ?>电影</legend>
-        <div class="control-group">
-            <label for="movie[topic_id]" class="control-label">所属影集</label>
-            <div class="controls">
-                <input type="text" name="movie[topic_id]" class="input-xlarge" value="<?php if (isset($movie->topic_id)) echo $movie->topic_id ?>">
-            </div>
-        </div>
-
+        <input type="hidden" name="movie[id]" value="<?php if (isset($movie->id)) echo $movie->id ?>" />
         <?php foreach ($movie as $k => $v): ?>
         <div class="control-group">
             <label for="movie[<?php echo $k ?>]" class="control-label"><?php echo $k ?></label>
