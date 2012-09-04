@@ -9,13 +9,9 @@ blockquote .blockquote_right { background: url(../images/common/blockquote1.png)
 .header {
     height: 60px; line-height: 60px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset; background-color: #F5F5F5; background-image: none;
 }
-
 .header a { color: #222; }
-
-.header .member ul { margin-bottom: 0; }
-.header .member li {
-    float: left; height: 60px; line-height: 60px; padding: 0 5px;
-}
+.header .dropdown-menu { background-color: #F5F5F5; min-width: 140px; }
+.header .dropdown-menu a:hover { background-color: #F5F5F5; color: #000; }
 
 .footer {
     padding: 10px 0; color: #636363; font-size: 12px; overflow: hidden; border-top: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0; box-shadow: inset 0 -1px 0 white; background-color: #F8F8F8;
