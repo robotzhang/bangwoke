@@ -1,4 +1,7 @@
-<?php $this->layout->setLayout(array('title' => '帮我客 -- '.movie_name($movie))); ?>
+<?php $this->layout->setLayout(array(
+    'title' => '帮我客 -- '.movie_name($movie),
+    'description' => mb_substr($movie->summary, 0, 100).'...'
+)); ?>
 <a style="color: #333;" href="<?php echo site_url('movies/'.$movie->id) ?>">
     <strong>
         <?php echo movie_name($movie) ?>
