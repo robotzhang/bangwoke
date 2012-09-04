@@ -15,6 +15,7 @@ class Movies extends CI_Controller {
 
 	public function show($id = 1) {
         $movie = current($this->movie->find_by('id', $id));
+        $movie = $this->movie->set_topic($movie);
         $this->layout->view('movies/show', array('movie' => $movie));
 	}
 }
