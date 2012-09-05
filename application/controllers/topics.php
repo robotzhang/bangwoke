@@ -8,9 +8,9 @@ class Topics extends CI_Controller {
 
     public function index()
     {
-        $records = $this->topic->get(array(), $this->input->get('page'), 20);
+        $topics = $this->topic->get(array(), $this->input->get('page'), 20);
         $this->load->library('page', array('total' => $this->topic->last_query_number));
-        $this->layout->view('topics/index', array('records' => $records, 'pagination' => $this->page->create()));
+        $this->layout->view('topics/index', array('topics' => $topics, 'pagination' => $this->page->create()));
     }
 
 	public function show($id = 1) {

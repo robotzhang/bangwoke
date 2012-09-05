@@ -3,9 +3,9 @@
         <tr>
             <th width="40">id</th>
             <th>昵称</th>
-            <th width="40">邮箱</th>
-            <th width="40">ip</th>
-            <td width="50">注册时间</td>
+            <th>邮箱</th>
+            <th>ip</th>
+            <th>注册时间</th>
         </tr>
     </thead>
     <tbody>

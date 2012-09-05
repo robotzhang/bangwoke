@@ -26,6 +26,12 @@
                 <textarea name="topic[summry]" class="input-xxlarge"><?php if (!empty($topic)) echo $topic->summry ?></textarea>
             </div>
         </div>
+        <div class="control-group">
+            <label for="topic[img]" class="control-label">封面图片</label>
+            <div class="controls">
+                <input type="text" name="topic[img]" class="input-xxlarge" value="<?php if (!empty($topic)) echo $topic->img ?>">
+            </div>
+        </div>
         <div class="form-actions">
             <button class="btn  btn-success" type="submit"><?php echo empty($topic) ? '创建' : '更新' ?></button>
             <button class="btn" type="reset">取消</button>

@@ -104,9 +104,18 @@
     </ul>
 </div>
 
-<!--div style="margin-bottom: 30px;">
-
-</div-->
+<p><span class="fs16">热门影集推荐</span> <a class="fs12" href="<?php echo site_url('topics') ?>">更多...</a> </p>
+<div style="margin-bottom: 30px;" class="row">
+    <?php foreach($topics as $topic): ?>
+    <div class="span3 mb20">
+        <div class="box" style="padding: 10px;adding: 10px; height: 280px; overflow: hidden; text-overflow: ellipsis;">
+            <p><a href="<?php echo site_url('topics/'.$topic->id) ?>"><img src="<?php echo $topic->img ?>" width="210" /></a></p>
+            <div><a style="color: #333;" href="<?php echo site_url('topics/'.$topic->id) ?>"><strong><?php echo $topic->name ?></strong></a></div>
+            <div style="text-indent: 16px;"><?php echo $topic->summry ?></div>
+        </div>
+    </div>
+    <?php endforeach ?>
+</div>
 
 <div class="row">
     <div class="span4">
