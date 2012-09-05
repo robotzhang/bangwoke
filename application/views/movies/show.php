@@ -47,6 +47,21 @@
             </div>
             <?php endif ?>
         </div>
+
+        <!-- Duoshuo Comment BEGIN -->
+        <div style="margin-top: 20px;" class="ds-thread box" data-thread-key="" data-title="" data-author-key="" data-url=""></div>
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:"bangwoke"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = 'http://static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <!-- Duoshuo Comment END -->
     </div>
     <div class="span3">
         <div class="box">
