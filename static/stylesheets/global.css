@@ -32,6 +32,12 @@ blockquote .blockquote_right { background: url(../images/common/blockquote1.png)
 .menu a:hover { background-color: #FDFDFD; text-decoration: none; color: #08C; }
 .menu a.selected { background: none repeat scroll 0 0 #FFFFFF; border-left: 2px solid #D26911; box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) inset; color: #222222; cursor: default; font-weight: bold; }
 
+.sider_tool { position: fixed; right: 0; top: 60%; }
+.sider_tool ul { background-color: #F1F1F1; border: #E4E4E4 1px solid; border-radius: 3px; }
+.sider_tool li { border-top: #FFF 1px solid; border-bottom: #E4E4E4 1px solid; width: 38px; height: 38px; line-height: 38px; text-align: center; }
+.sider_tool li:first-child { border-top: none; }
+.sider_tool li:last-child { border-bottom: none; }
+
 .mb10 { margin-bottom: 10px; }
 .mb20 { margin-bottom: 20px; }
 

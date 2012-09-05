@@ -38,5 +38,13 @@ $action_next = $this->uri->segment(2);
   </div>
 
   <?php $this->load->view('common/footer.php'); ?>
+
+  <div class="sider_tool">
+      <ul class="unstyled">
+          <li title="意见反馈"><a href="<?php echo site_url('about/feedback') ?>"><img src="<?php echo base_url('static/images/common/feedback.png') ?>" alt="feedback"/></a></li>
+          <li title="反馈顶部"><a href="javascript:window.scrollTo(0,0);"><img src="<?php echo base_url('static/images/common/to_top.png') ?>" alt="to_top"/></a></li>
+          <li title="在线咨询"><a href="javascript:void(0);"><img width="16" height="16" src="<?php echo base_url('static/images/common/qq.png') ?>" alt="qq"/></a></li>
+      </ul>
+  </div>
 </body>
 </html>
