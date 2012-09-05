@@ -41,8 +41,8 @@
 </script>
 
 <div class="home_header_bg">
-    <div id="topic_img_1" style="background: url(<?php echo base_url('static/images/home/topic1.jpg') ?>) center center;"></div>
-    <div id="topic_img_2" style="background: url(<?php echo base_url('static/images/home/topic2.jpg') ?>) center center;"></div>
+    <div id="topic_img_1" style="background: url(<?php echo base_url('http://conv.kuaipan.cn/getmedia/?f=14026396821107162&v=1&copts=pw:540,h:370&t=1346857254237&acc_params=entryid:14026396821107162,pickupCode:&t=1346857254237') ?>) center center;"></div>
+    <div id="topic_img_2" style="background: url(<?php echo base_url('http://conv.kuaipan.cn/getmedia/?f=14026396821107163&v=1&copts=pw:540,h:370&t=1346857311593&acc_params=entryid:14026396821107163,pickupCode:&t=1346857311593') ?>) center center;"></div>
 </div>
 <div class="home_header clearfix">
     <div class="slides_container clearfix pull-left">
@@ -99,8 +99,8 @@
         </div>
     </div>
     <ul class="slide_nav">
-        <li class="current" show="topic_img_1"><a title="男人必看" href="#0"><img src="http://conv.kuaipan.cn/getmedia/?f=14026396821107162&v=1&copts=pw:540,h:370&t=1346857254237&acc_params=entryid:14026396821107162,pickupCode:&t=1346857254237" width="55" height="90"></a></li>
-        <li show="topic_img_2"><a title="女人必看" href="#1"><img src="http://conv.kuaipan.cn/getmedia/?f=14026396821107163&v=1&copts=pw:540,h:370&t=1346857311593&acc_params=entryid:14026396821107163,pickupCode:&t=1346857311593" width="55"  height="90"></a></li>
+        <li class="current" show="topic_img_1"><a title="男人必看" href="#0"><img src="http://img1.douban.com/spic/s4008884.jpg" width="55" height="90"></a></li>
+        <li show="topic_img_2"><a title="女人必看" href="#1"><img src="http://img1.douban.com/spic/s3846882.jpg" width="55"  height="90"></a></li>
     </ul>
 </div>
 
