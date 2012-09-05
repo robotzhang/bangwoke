@@ -15,7 +15,7 @@
     .buys .number { color: #878787; }
     .buys .number input { width: 50px; margin-left: 10px; margin-right: 5px; }
 
-    .sidebar { float: right; width: 210px; }
+    .sidebar {  width: 210px; top: 380px; position: fixed; margin-left: 730px; }
     .sidebar .box { box-shadow: 0 1px 2px #B0B3B6; border:#DADEE1 1px solid; padding: 10px; border-radius: 5px; }
     .sidebar .box ul { margin-bottom: 0; }
 
@@ -110,9 +110,24 @@
         </li>
         <?php endforeach ?>
     </ul>
+
+    <!-- Duoshuo Comment BEGIN -->
+    <div style="margin-top: 20px;" class="ds-thread box" data-thread-key="" data-title="" data-author-key="" data-url=""></div>
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"bangwoke"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'http://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- Duoshuo Comment END -->
 </div>
 
-<div class="sidebar" style="position: fixed; margin-left: 730px;">
+<div class="sidebar">
     <div class="clearfix" style="margin-top: 90px;"></div>
     <div class="menu">
         <p><strong>快速阅读导航</strong></p>
