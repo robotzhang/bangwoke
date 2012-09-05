@@ -41,8 +41,8 @@
 </script>
 
 <div class="home_header_bg">
-    <div id="topic_img_1" style="background: url('http://conv.kuaipan.cn/getmedia/?f=14026396821107162&v=1&copts=pw:540,h:370&t=1346857254237&acc_params=entryid:14026396821107162,pickupCode:&t=1346857254237') center center;"></div>
-    <div id="topic_img_2" style="background: url('http://conv.kuaipan.cn/getmedia/?f=14026396821107163&v=1&copts=pw:540,h:370&t=1346857311593&acc_params=entryid:14026396821107163,pickupCode:&t=1346857311593') center center;"></div>
+    <div id="topic_img_1" style="background: url(<?php echo base_url('static/images/home/topic1.jpg') ?>) center center;"></div>
+    <div id="topic_img_2" style="background: url(<?php echo base_url('static/images/home/topic2.jpg') ?>) center center;"></div>
 </div>
 <div class="home_header clearfix">
     <div class="slides_container clearfix pull-left">
