@@ -75,9 +75,19 @@
         <?php foreach ($topic->movies as $key => $movie): ?>
         <li>
             <a name="<?php echo 'movie_'.$movie->id ?>"></a>
-            <div class="movie_img">
-                <img src="<?php echo $movie->img ?>"/>
+            <div class="pull-left">
+                <div class="movie_img mb10">
+                    <img src="<?php echo $movie->img ?>"/>
+                </div>
+                <?php if (!empty($movie->player)): ?>
+                <div style="text-align: center;">
+                    <a title="在线播放" class="btn btn-small btn-success" href="<?php echo site_url('movies/'.$movie->id.'#player') ?>">
+                        <!--i class="icon-play-circle icon-white"></i-->在线观看
+                    </a>
+                </div>
+                <?php endif ?>
             </div>
+
             <div class="movie_info">
                 <div class="pop-triangle"></div>
                 <div style="line-height: 25px;">

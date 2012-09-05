@@ -33,6 +33,19 @@
             <div>导演：<?php echo $movie->director?></div>
             <div>主演：<?php echo str_replace(",", " / ", $movie->cast) ?></div>
             <div style="margin-top: 5px; text-indent: 13px;"><?php echo rtrim($movie->summary, "©豆瓣") ?></div>
+
+            <?php if (!empty($movie->player)): ?>
+            <a name="player"></a>
+            <div class="player" style="text-align: center; margin: 20px auto;">
+                <object width="550" height="400" type="application/x-shockwave-flash" data="<?php echo $movie->player ?>">
+                    <param value="<?php echo $movie->player ?>" name="movie">
+                    <param name="wmode" value="transparent">
+                    <param name="allowFullScreen" value="true">
+                    <param name="allowScriptAccess" value="always">
+                    <param name="flashvars" value="autoplay=1">
+                </object>
+            </div>
+            <?php endif ?>
         </div>
     </div>
     <div class="span3">

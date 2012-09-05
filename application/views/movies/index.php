@@ -10,8 +10,17 @@
 <ul class="movies unstyled">
     <?php foreach ($movies as $movie): ?>
     <li>
-        <div class="movie_img pull-left">
-            <img src="<?php echo $movie->img ?>"/>
+        <div class="pull-left">
+            <div class="movie_img mb10">
+                <img src="<?php echo $movie->img ?>"/>
+            </div>
+            <?php if (!empty($movie->player)): ?>
+            <div style="text-align: center;">
+                <a title="免费在线观看" class="btn btn-small btn-success" href="<?php echo site_url('movies/'.$movie->id.'#player') ?>">
+                    <!--i class="icon-play-circle icon-white"></i-->在线观看
+                </a>
+            </div>
+            <?php endif ?>
         </div>
         <div class="movie_info">
             <div class="pop-triangle"></div>
