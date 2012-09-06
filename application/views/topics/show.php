@@ -70,7 +70,22 @@
 </div>
 
 <div class="movies">
-    <div class="title">该专辑包含的影片列表</div>
+    <div class="title clearfix">
+        <div class="pull-left">该专辑包含的影片列表</div>
+        <!-- JiaThis Button BEGIN -->
+        <div class="jiathis_style pull-left" style="display: inline; margin-left: 20px;">
+            <span class="jiathis_txt">分享到：</span>
+            <a class="jiathis_button_qzone"></a>
+            <a class="jiathis_button_tsina"></a>
+            <a class="jiathis_button_tqq"></a>
+            <a class="jiathis_button_renren"></a>
+            <a class="jiathis_button_kaixin001"></a>
+            <a href="http://www.jiathis.com/share?uid=1678347" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        </div>
+        <script type="text/javascript">var jiathis_config = {data_track_clickback:true};</script>
+        <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1344774277688302" charset="utf-8"></script>
+        <!-- JiaThis Button END -->
+    </div>
     <ul class="unstyled">
         <?php foreach ($topic->movies as $key => $movie): ?>
         <li>

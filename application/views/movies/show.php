@@ -15,7 +15,7 @@
         <div class="movie_img pull-left">
             <img src="<?php echo $movie->img ?>"/>
         </div>
-        <div class="movie_info">
+        <div class="movie_info clearfix">
             <div class="pop-triangle"></div>
             <div style="line-height: 25px;">
                 <a style="color: #333;" href="<?php echo site_url('movies/'.$movie->id) ?>">
@@ -46,6 +46,20 @@
                 </object>
             </div>
             <?php endif ?>
+
+            <!-- JiaThis Button BEGIN -->
+            <div class="jiathis_style" style="margin-top: 10px;">
+                <span class="jiathis_txt">分享到：</span>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_renren"></a>
+                <a class="jiathis_button_kaixin001"></a>
+                <a href="http://www.jiathis.com/share?uid=1678347" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <script type="text/javascript">var jiathis_config = {data_track_clickback:true};</script>
+            <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1344774277688302" charset="utf-8"></script>
+            <!-- JiaThis Button END -->
         </div>
 
         <!-- Duoshuo Comment BEGIN -->
