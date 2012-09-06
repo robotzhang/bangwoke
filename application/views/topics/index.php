@@ -1,4 +1,10 @@
 <?php $this->layout->setLayout(array('title' => '帮我客 -- 影集大全')); ?>
+<ul class="breadcrumb">
+    <li>
+        <a href="<?php echo site_url() ?>">首页</a> <span class="divider">/</span>
+    </li>
+    <li class="active">影集大全</li>
+</ul>
 <div style="margin-bottom: 30px;" class="row">
     <?php foreach($topics as $topic): ?>
     <div class="span3 mb20">

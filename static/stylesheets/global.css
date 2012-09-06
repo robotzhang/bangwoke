@@ -38,6 +38,8 @@ blockquote .blockquote_right { background: url(../images/common/blockquote1.png)
 .sider_tool li:first-child { border-top: none; }
 .sider_tool li:last-child { border-bottom: none; }
 
+.breadcrumb { border: none; background: none; }
+
 .mb10 { margin-bottom: 10px; }
 .mb20 { margin-bottom: 20px; }
 .mt10 { margin-top: 10px; }

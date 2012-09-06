@@ -7,6 +7,16 @@
     .movies .movie_info .pop-triangle { width: 13px; height: 17px; position: absolute; margin-left: -28px; margin-top: 10px; background: url(<?php echo base_url('static/images/common/narrow.png') ?>);  }
 </style>
 
+<ul class="breadcrumb">
+    <li>
+        <a href="<?php echo site_url() ?>">首页</a> <span class="divider">/</span>
+    </li>
+    <li>
+        <a href="<?php echo site_url('topics') ?>">影集大全</a> <span class="divider">/</span>
+    </li>
+    <li class="active">电影大全</li>
+</ul>
+
 <ul class="movies unstyled">
     <?php foreach ($movies as $movie): ?>
     <li>

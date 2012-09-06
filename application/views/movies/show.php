@@ -10,6 +10,16 @@
     .movies .movie_info .pop-triangle { width: 13px; height: 17px; position: absolute; margin-left: -28px; margin-top: 10px; background: url(<?php echo base_url('static/images/common/narrow.png') ?>);  }
 </style>
 
+<ul class="breadcrumb">
+    <li>
+        <a href="<?php echo site_url() ?>">首页</a> <span class="divider">/</span>
+    </li>
+    <li>
+        <a href="<?php echo site_url('topics/'.$movie->topic_id) ?>">影集</a> <span class="divider">/</span>
+    </li>
+    <li class="active">电影详情</li>
+</ul>
+
 <div class="row">
     <div class="movies span9">
         <div class="movie_img pull-left">
