@@ -122,7 +122,7 @@
     <div class="span12 mb20">
     <?php foreach($movies as $movie): ?>
         <div class="pull-left box" style="margin: 10px;">
-            <a title="<?php echo movie_name($movie) ?>" href="<?php echo site_url('topics/'.$movie->id) ?>">
+            <a title="<?php echo movie_name($movie).' / '.$movie->rating.'分' ?>" href="<?php echo site_url('topics/'.$movie->id) ?>">
                 <img width="65" height="95" src="<?php echo $movie->img ?>"/>
             </a>
             <!--div class="fs12" style="width: 85px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 0 -10px; margin-top:5px;">
