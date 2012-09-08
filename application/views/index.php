@@ -117,6 +117,22 @@
     <?php endforeach ?>
 </div>
 
+<p><span class="fs16">热门电影推荐</span> <a class="fs12" href="<?php echo site_url('movies') ?>">更多...</a> </p>
+<div style="margin-bottom: 30px;" class="row">
+    <div class="span12 mb20">
+    <?php foreach($movies as $movie): ?>
+        <div class="pull-left box" style="margin: 10px;">
+            <a title="<?php echo movie_name($movie) ?>" href="<?php echo site_url('topics/'.$movie->id) ?>">
+                <img width="65" height="95" src="<?php echo $movie->img ?>"/>
+            </a>
+            <!--div class="fs12" style="width: 85px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 0 -10px; margin-top:5px;">
+                <a style="color: #333;" title="<?php echo movie_name($movie) ?>" href="<?php echo site_url('topics/'.$movie->id) ?>"><?php echo movie_name($movie) ?></a>
+            </div-->
+        </div>
+    <?php endforeach ?>
+    </div>
+</div>
+
 <div class="row">
     <div class="span4">
         <div class="pull-left"><img src="<?php echo base_url('static/images/home/logo_alipay.gif') ?>"/></div>
