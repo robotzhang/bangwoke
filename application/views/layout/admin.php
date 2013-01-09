@@ -34,10 +34,10 @@ $action_next = $this->uri->segment(2);
   <div class="site">
       <div class="container">
           <div class="row">
-              <div class="span3">
+              <div>
                   <?php $this->load->view('admin/_menu'); ?>
               </div>
-              <div class="span9">
+              <div>
                   <?php echo $layout['content']; ?>
               </div>
           </div>
