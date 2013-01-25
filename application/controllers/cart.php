@@ -46,7 +46,7 @@ class Cart extends CI_Controller {
             'user_id' => current_user()->id,
             'subject' => '',
             'status' => 0,
-            'total' => $this->cart->format_number($this->cart->total())
+            'total' => $this->cart->total()
         );
         // 添加订单详情
         $order_subject = array();
